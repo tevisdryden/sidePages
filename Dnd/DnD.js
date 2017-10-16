@@ -13,8 +13,6 @@ angular.module('DnD', [])
       	};
 
       	$scope.difficulties = ["Easy", "Medium", "Hard"];
-      	$scope.formDifficulty.item = 1;
-
 
 
       $scope.test = 'Hello world!';
