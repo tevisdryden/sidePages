@@ -50,6 +50,16 @@
       </span>
     </div>
 
+    <div ng-repeat="monster in monsters | orderBy:'-quantity'">
+      {{monster.quantity}}
+      <span style="font-size:20px; margin-left:10px;">
+          {{monster.name}}
+      </span>
+      <span>
+        <a href="#/posts/{{posts.indexOf(post)}}">Comments</a>
+      </span>
+    </div>
+
   </script>
 
   <script type="text/ng-template" id="/posts.html">
