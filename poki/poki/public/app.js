@@ -15,7 +15,7 @@ function pokemonFetcher ($http) {
         })
     },
     tryit: function() {
-      var politics = "https://zlzlap7j50.execute-api.us-east-1.amazonaws.com/prod";
+      var politics = "/politics";
       return $http
         .get(politics)
         .then(function (resp) {
