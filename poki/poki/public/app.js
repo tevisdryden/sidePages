@@ -5,7 +5,7 @@ app.controller('mainCtrl', mainCtrl)
 
 function pokemonFetcher ($http) {
 
-  var API_ROOT = 'pokemon'
+  var API_ROOT = '/pokemon'
   return {
     get: function () {
       return $http
@@ -56,5 +56,5 @@ function mainCtrl ($scope, pokemonFetcher, $http) {
     }).error(function(data, status, headers, config) {
       console.log("Post failed");
     });
-}
+  }
 }
