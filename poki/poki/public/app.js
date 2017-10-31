@@ -6,8 +6,10 @@ app.controller('mainCtrl', mainCtrl)
 function pokemonFetcher ($http) {
 
   var API_ROOT = '/pokemon'
+  console.log("here again");
   return {
     get: function () {
+      console.log("here again?");
       return $http
         .get(API_ROOT)
         .then(function (resp) {
@@ -17,6 +19,7 @@ function pokemonFetcher ($http) {
         })
     },
     tryit: function() {
+      console.log("here again?!?!?!");
       var politics = "/politics";
       return $http
         .get(politics)
