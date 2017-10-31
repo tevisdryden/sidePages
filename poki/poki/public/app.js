@@ -11,6 +11,8 @@ function pokemonFetcher ($http) {
       return $http
         .get(API_ROOT)
         .then(function (resp) {
+          console.log("got This for you");
+          console.log(resp);
           return resp.data
         })
     },
