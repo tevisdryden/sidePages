@@ -56,6 +56,7 @@ function mainCtrl ($scope, pokemonFetcher, $http) {
        data: formData
     }).success(function(data, status, headers, config) {
       console.log("Post worked");
+      console.log(data);
     }).error(function(data, status, headers, config) {
       console.log("Post failed");
     });
