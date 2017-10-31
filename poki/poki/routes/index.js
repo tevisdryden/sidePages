@@ -49,6 +49,7 @@ router.post('/pokemon', function(req, res) {
     console.log("In Pokemon Post");
     console.log(req.body);
     pokemon.push(req.body);
+    console.log("pushed");
     res.end('{"success" : "Updated Successfully", "status" : 200}');
 }); 
 
