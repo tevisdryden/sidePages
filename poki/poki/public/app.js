@@ -40,7 +40,7 @@ function mainCtrl ($scope, pokemonFetcher, $http) {
   pokemonFetcher.get()
     .then(function (data) {
       console.log("is this here?");
-      $scope.pokemon = data
+      $scope.pokemon = data;
     })
 
   pokemonFetcher.tryit()
