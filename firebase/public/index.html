@@ -1,26 +1,40 @@
 <!doctype html>
 <html ng-app="myApp">
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
-    <script src="javascripts/script.js"></script>
-  </head>
+<head>
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "From Step 1",
+  authDomain: "From Step 1",
+  databaseURL: "https://chat-project-d5f7b.firebaseio.com/",
+  storageBucket: "From Step 1",
+  messagingSenderId: "From Step 1"
+};
+firebase.initializeApp(config);
+</script>
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+<!-- Your Javascript -->
+<script src="javascripts/script.js"></script>
+</head>
 
-  <body>
+<body>
 
-  <div ng-controller="chatController">
-  <form novalidate class="simple-form">
-    Name: <input type="text" ng-model="user.name" /><br />
-    Chat: <input type="text" ng-model="user.chat" /><br />
-    <input type="submit" ng-click="update(user)" value="Save" />
-  </form>
-  <ul>
-  <li ng-repeat='line in chats'>
-  {{line.from}} - {{line.body}}
-  </li>
-  </ul>
+<div ng-controller="chatController">
+<form novalidate class="simple-form">
+  Name: <input type="text" ng-model="user.name" /><br />
+  Chat: <input type="text" ng-model="user.chat" /><br />
+  <input type="submit" ng-click="update(user)" value="Save" />
+</form>
+<ul>
+<li ng-repeat='line in chats'>
+{{line.from}} - {{line.body}}
+</li>
+</ul>
 </div>
 
-  </body>
+</body>
 </html>
